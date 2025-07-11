@@ -12,51 +12,56 @@ Lets say we need a data structure that can handle a lot of fast insertions. What
 
 Here's an array with 3 elements:
 
-\[A] \[D] \[Z]
+```
+[A] [D] [Z]
+```
 
 What happens when we want to insert element B?
 
 First we create a new index at the end of the array:
 
-\[A] \[D] \[Z] \[\_]
+```
+[A] [D] [Z] [_]
+```
 
 Then each element after the index we are inserting the element needs to shift:
 
-\[A] \[D] \[\_] \[Z]
-
-\[A] \[\_] \[D] \[Z]
+```
+[A] [D] [_] [Z]
+[A] [_] [D] [Z]
+```
 
 Finally, we can insert the new element:
 
-\[A] \[B] \[D] \[Z]
+```
+[A] [B] [D] [Z]
+```
 
 What would it look like if we had the same data in a linked list?
 
+```
 A->D
-
 D->Z
-
 Z->null
+```
 
 To insert element B first we would create the element with a pointer to the next node in the list
 
+```
 A->D
-
 D->Z
-
 Z->null
-
 B->D
+```
 
 Then we simply update the pointer for the node before the new element
 
+```
 A->B
-
 D->Z
-
 Z->null
-
 B->D
+```
 
 No shifting of elements required. For a situation that requires a very fast insertion, this is why a linked list could be a better choice over an array.
 
