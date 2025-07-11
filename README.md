@@ -190,7 +190,7 @@ The end result will be a sorted list of the same array:
 
 The time complexity for a merge sort is O(n log(n)) which is considered good I guess, I don't even know what that means yet. Here's an example of merge sort in Python tho:
 
-```
+```python
 def mergeSort(arr):
   if len(arr) <= 1:
     return arr
@@ -241,28 +241,32 @@ Constraint 2: Z cannot be adjacent to X
 Constraint 3: The array cannot contain 2 indexes of the same value
 Positions: [0] [1] [2]
 
-                                ROOT
-                                 |
+<strong>                                ROOT
+</strong>                                 |
         ┌────────────────────────┼────────────────────────┐
         |                        |                        |
 <strong>        X                        Y                        Z           pos[0]
 </strong>        |                        |                        |
    ┌────┼────┐              ┌────┼────┐              ┌────┼────┐
    |    |    |              |    |    |              |    |    |
-   X    Y    Z              X    Y    Z              X    Y    Z      pos[1]   
-   |    |    |              |    |    |              |    |    |
+<strong>   X    Y    Z              X    Y    Z              X    Y    Z      pos[1]   
+</strong>   |    |    |              |    |    |              |    |    |
    ✗    |    ✗              |    ✗    ✗              ✗    |    ✗
- (dup)  |  (X→Z)            |  (dup) (X→Z)         (Z→X)  |  (dup)
-        |                   |                             |    
+<strong> (dup)  |  (X→Z)            |  (dup) (X→Z)         (Z→X)  |  (dup)
+</strong>        |                   |                             |    
    ┌────┼────┐         ┌────┼────┐                   ┌────┼────┐
    |    |    |         |    |    |                   |    |    |
-   X    Y    Z         X    Y    Z                   X    Y    Z      pos[2]
-   |    |    |         |    |    |                   |    |    |
+<strong>   X    Y    Z         X    Y    Z                   X    Y    Z      pos[2]
+</strong>   |    |    |         |    |    |                   |    |    |
    ✗    ✗    ✓         ✗    ✗    ✗                   ✓    ✗    ✗
- (dup)(dup)(XYZ)     (dup)(dup)(X→Z)               (ZYX)(dup)(dup)
-             ↑                                       ↑   
+<strong> (dup)(dup)(XYZ)     (dup)(dup)(X→Z)               (ZYX)(dup)(dup)
+</strong>             ↑                                       ↑   
            VALID                                   VALID 
 </code></pre>
+
+Follow each tree path to see how this algorithm would calculate the valid solutions. You'll see (dup) for when a duplicate value would be in the array (violating constraint 3), (X→Z) or (Z→X) when the solution violates constraint 3, and that the two valid answers (XYZ) and (ZYX).
+
+Because it prunes invalid paths early on it's more effecient than a brute force algorithm. You'll see at position 1 that it ignores 2/3rds of the potential routes.
 
 **6) Recursive Algorithm**
 
