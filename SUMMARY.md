@@ -5,7 +5,10 @@
 
 ## 050 Algorithm Examples
 
-* [051 Greedy Algorithm (Knapsack Problem)](050-algorithm-examples/051-greedy-algorithm-knapsack-problem.md)
-* [052 Greedy Algorithm (Shortest Path Problem)](050-algorithm-examples/052-greedy-algorithm-shortest-path-problem.md)
-* [053 Merge Sort Example](050-algorithm-examples/053-merge-sort-example.md)
-* [054 Backtracking Algorithm Example](050-algorithm-examples/054-backtracking-algorithm-example.md)
+* [051 Longest Common Substring (DNA Analysis Example)](050-algorithm-examples/051-longest-common-substring-dna-analysis-example.md)
+* [052 Binary Search Example (Product Search)](050-algorithm-examples/052-binary-search-example-product-search.md)
+* [053 Dijkstra's Shortest Path (Navigation Example)](050-algorithm-examples/053-dijkstras-shortest-path-navigation-example.md)
+* [054 Greedy Algorithm (Knapsack Problem)](050-algorithm-examples/054-greedy-algorithm-knapsack-problem.md)
+* [055 Greedy Algorithm (Shortest Path Problem)](050-algorithm-examples/055-greedy-algorithm-shortest-path-problem.md)
+* [056 Merge Sort Example](050-algorithm-examples/056-merge-sort-example.md)
+* [057 Backtracking Algorithm Example](050-algorithm-examples/057-backtracking-algorithm-example.md)

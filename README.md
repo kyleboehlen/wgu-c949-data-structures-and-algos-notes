@@ -62,6 +62,12 @@ No shifting of elements required. For a situation that requires a very fast inse
 
 ## Algorithms
 
+A computational program specifies and input, a question about the input, that can be answered using a computer, and the desired output. An algorithm is the step by step process a computer would use to solve a computational problem. However, please note that an algorithm does not have to be written using a programming language.
+
+Examples of Practical Applications of Algorithms
+
+<table><thead><tr><th width="139">Field</th><th>Computational Problem</th><th width="257">Possible Algorithm</th><th data-type="content-ref"></th></tr></thead><tbody><tr><td>DNA Analysis</td><td>Given strands of DNA from two different individuals, what is the longest strand of nucleotides that both individuals have in common?</td><td><strong>Longest common substring problem:</strong> nucleotides in a string can be represented using A, C, G, and T. </td><td><a href="050-algorithm-examples/051-longest-common-substring-dna-analysis-example.md">051-longest-common-substring-dna-analysis-example.md</a></td></tr><tr><td>Product Search</td><td>If you were given a product ID, and an array of products, what is an efficient way of looking up the product details?</td><td><p><strong>Binary Search:</strong> an efficient way of searching through information where<br>A) you have an ordered list</p><p>and <br>B) the items can be accessed directly, for example via indexes in an array. </p></td><td><a href="050-algorithm-examples/052-binary-search-example-product-search.md">052-binary-search-example-product-search.md</a></td></tr><tr><td>Navigation</td><td>Given a starting and ending location, what is the fastest way to traverse the paths between those 2 locations?</td><td><strong>Dijkstra's Shortest Path:</strong> an algorithm that determines what the shortest path is between a starting vertex and each other vertex in a graph. </td><td><a href="050-algorithm-examples/053-dijkstras-shortest-path-navigation-example.md">053-dijkstras-shortest-path-navigation-example.md</a></td></tr></tbody></table>
+
 ### The 10 Types of Algorithms
 
 **1) Brute Force**
@@ -77,22 +83,22 @@ A greedy algorithm selects the best option given each situation provided, regard
 
 The best way to show how the greedy algorithm works is actually by giving examples of that show the shortcomings of a greedy algorithm. Here's an example of the greedy algorithm being applied to the knapsack problem:
 
-{% content-ref url="050-algorithm-examples/051-greedy-algorithm-knapsack-problem.md" %}
-[051-greedy-algorithm-knapsack-problem.md](050-algorithm-examples/051-greedy-algorithm-knapsack-problem.md)
+{% content-ref url="050-algorithm-examples/054-greedy-algorithm-knapsack-problem.md" %}
+[054-greedy-algorithm-knapsack-problem.md](050-algorithm-examples/054-greedy-algorithm-knapsack-problem.md)
 {% endcontent-ref %}
 
 Take a look at another example where we are applying the greedy algorithm to a single shortest path problem:
 
-{% content-ref url="050-algorithm-examples/052-greedy-algorithm-shortest-path-problem.md" %}
-[052-greedy-algorithm-shortest-path-problem.md](050-algorithm-examples/052-greedy-algorithm-shortest-path-problem.md)
+{% content-ref url="050-algorithm-examples/055-greedy-algorithm-shortest-path-problem.md" %}
+[055-greedy-algorithm-shortest-path-problem.md](050-algorithm-examples/055-greedy-algorithm-shortest-path-problem.md)
 {% endcontent-ref %}
 
 **3) Divide and Conquer Algorithm**
 
 A divide and conquer algorithm breaks a problem up in to smaller parts, solves each part independently, and then merges all of the solutions in to one answer. A merge sort is a good example of a divide and conquer algorithm:
 
-{% content-ref url="050-algorithm-examples/053-merge-sort-example.md" %}
-[053-merge-sort-example.md](050-algorithm-examples/053-merge-sort-example.md)
+{% content-ref url="050-algorithm-examples/056-merge-sort-example.md" %}
+[056-merge-sort-example.md](050-algorithm-examples/056-merge-sort-example.md)
 {% endcontent-ref %}
 
 **4) Dynamic Programming Algorithm**
@@ -103,8 +109,8 @@ A divide and conquer algorithm breaks a problem up in to smaller parts, solves e
 
 The backtracking algorithm allows the algorithm to back out when when an invalid state is reached. Take the following example:
 
-{% content-ref url="050-algorithm-examples/054-backtracking-algorithm-example.md" %}
-[054-backtracking-algorithm-example.md](050-algorithm-examples/054-backtracking-algorithm-example.md)
+{% content-ref url="050-algorithm-examples/057-backtracking-algorithm-example.md" %}
+[057-backtracking-algorithm-example.md](050-algorithm-examples/057-backtracking-algorithm-example.md)
 {% endcontent-ref %}
 
 **6) Recursive Algorithm**
