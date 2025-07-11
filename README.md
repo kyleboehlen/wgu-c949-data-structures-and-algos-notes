@@ -105,9 +105,164 @@ You'll see that the greedy algorithm will choose to go to location C first becau
 
 **3) Divide and Conquer Algorithm**
 
+A divide and conquer algorithm breaks a problem up in to smaller parts, solves each part independently, and then merges all of the solutions in to one answer. A merge sort is a good example of a divide and conquer algorithm. How does a merge sort work?
+
+Take an array:
+
+```
+Original: [64, 34, 25, 12, 22, 11, 90]
+```
+
+First it splits the orignal array in half over and over again until each node only consists of 1 element.
+
+```
+[64, 34, 25, 12, 22, 11, 90]            1 node
+       /              \             
+[64, 34, 25]      [12, 22, 11, 90]      2 nodes
+    /    \           /         \
+[64]   [34, 25]   [12, 22]   [11, 90]   4 nodes
+  |     /    \     /    \     /    \
+[64] [34]   [25] [12]  [22] [11]  [90]  7 nodes 
+```
+
+It then merges each of the nodes in the reverse order. Look at how many nodes are created in each step of the divde phase above. In the conquer phase we're going to combine nodes instead of splitting them by comparing the first items of each node and putting whichever one is smaller first in the merged node. On the first round this is very simple because we're only comparing one value to one value in each node. Take a look at the result:
+
+```
+[64] [25,34] [12,22] [11,90]   4 nodes 
+```
+
+We have 4 nodes, in each of the nodes all of the values are in order. Lets take a closer look at how we would merge these nodes in the next step. First we would create 2 nodes for the previous 4 nodes to merge in to:
+
+```
+[64] [25,34] [12,22] [11,90]   4 nodes
+[          ] [             ]   2 nodes     
+```
+
+Then we start by comparing only the first values of each node to each other. The first values in the left most nodes are 64 and 25. 25 is less than 64 so it gets added to the new node first:
+
+```
+[64] [34] [12,22] [11,90]   4 nodes
+[   25  ] [             ]   2 nodes     
+```
+
+Now the first most values in each of the left most nodes is 64 and 34. 34 is less than 64 so it gets added to the new node next:
+
+```
+[64] [  ] [12,22] [11,90]   4 nodes
+[ 25,34 ] [             ]   2 nodes     
+```
+
+Lastly only 64 is left, so it gets added to the new node next:
+
+```
+[  ]  [  ] [12,22] [11,90]   4 nodes
+[25,34,64] [             ]   2 nodes 
+```
+
+Let's quickly show how that would look for the right most nodes. It'll happen in 4 steps:
+
+1. ```
+   [  ]  [  ]  [22] [11,90]    4 nodes
+   [25,34,64]  [   12     ]    2 nodes
+   ```
+2. ```
+   [  ]  [  ]  [12,22] [90]    4 nodes
+   [25,34,64]  [     11   ]    2 nodes
+   ```
+3. ```
+   [  ]  [  ]     [22] [90]    4 nodes
+   [25,34,64]     [ 11,12 ]    2 nodes
+   ```
+4. ```
+   [  ]  [  ]    [  ]  [90]    4 nodes
+   [25,34,64]    [11,12,22]    2 nodes
+   ```
+5. ```
+   [  ]  [  ] [  ]     [  ]    4 nodes
+   [25,34,64] [11,12,22,90]    2 nodes
+   ```
+
+The end result will be a sorted list of the same array:
+
+6. ```
+   [11,12,22,25,34,64,90]      1 node
+   ```
+
+The time complexity for a merge sort is O(n log(n)) which is considered good I guess, I don't even know what that means yet. Here's an example of merge sort in Python tho:
+
+```
+def mergeSort(arr):
+  if len(arr) <= 1:
+    return arr
+
+  mid = len(arr) // 2
+  leftHalf = arr[:mid]
+  rightHalf = arr[mid:]
+
+  sortedLeft = mergeSort(leftHalf)
+  sortedRight = mergeSort(rightHalf)
+
+  return merge(sortedLeft, sortedRight)
+
+def merge(left, right):
+  result = []
+  i = j = 0
+
+  while i < len(left) and j < len(right):
+    if left[i] < right[j]:
+      result.append(left[i])
+      i += 1
+    else:
+      result.append(right[j])
+      j += 1
+
+  result.extend(left[i:])
+  result.extend(right[j:])
+
+  return result
+
+mylist = [3, 7, 6, -10, 15, 23.5, 55, -13]
+mysortedlist = mergeSort(mylist)
+print("Sorted array:", mysortedlist) 
+```
+
+
+
 **4) Dynamic Programming Algorithm**
 
 **5) Backtracking Algorithm**
+
+The backtracking algorithm allows the algorithm to back out when when an invalid state is reached. Take the following example:
+
+<pre><code>XYZ BACKTRACKING SEARCH TREE
+Goal: find all of the ways to fill 3 indexes in an array with the following constraints:
+Constraint 1: The only values that can be used are X, Y, and Z
+Constraint 2: Z cannot be adjacent to X
+Constraint 3: The array cannot contain 2 indexes of the same value
+Positions: [0] [1] [2]
+
+                                ROOT
+                                 |
+        ┌────────────────────────┼────────────────────────┐
+        |                        |                        |
+<strong>        X                        Y                        Z           pos[0]
+</strong>        |                        |                        |
+   ┌────┼────┐              ┌────┼────┐              ┌────┼────┐
+   |    |    |              |    |    |              |    |    |
+   X    Y    Z              X    Y    Z              X    Y    Z      pos[1]   
+   |    |    |              |    |    |              |    |    |
+   ✗    |    ✗              |    ✗    ✗              ✗    |    ✗
+ (dup)  |  (X→Z)            |  (dup) (X→Z)         (Z→X)  |  (dup)
+        |                   |                             |    
+   ┌────┼────┐         ┌────┼────┐                   ┌────┼────┐
+   |    |    |         |    |    |                   |    |    |
+   X    Y    Z         X    Y    Z                   X    Y    Z      pos[2]
+   |    |    |         |    |    |                   |    |    |
+   ✗    ✗    ✓         ✗    ✗    ✗                   ✓    ✗    ✗
+ (dup)(dup)(XYZ)     (dup)(dup)(X→Z)               (ZYX)(dup)(dup)
+             ↑                                       ↑   
+           VALID                                   VALID 
+</code></pre>
 
 **6) Recursive Algorithm**
 
@@ -118,6 +273,14 @@ You'll see that the greedy algorithm will choose to go to location C first becau
 **9) Hashing Algorithm**
 
 **10) Machine Learning Algorithm**
+
+
+
+How do you analyze an algorithm?
+
+1. Verify correctness. Does it actually produce the expected output for the given input?
+2. Analyze Space Complexity - measures how much extra memory or storage an algorithm needs as its input increases. --TODO: link analysis for space complexity
+3. Analyze Time Complexity - how long an agolrithm takes to run compared to the size of the input. Typically measured in Big O Notation. --TODO: link big o notation
 
 
 
