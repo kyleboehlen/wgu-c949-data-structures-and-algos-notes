@@ -92,16 +92,16 @@ Take a look at another example where we are applying the greedy algorithm to a s
 ```
         A
        / \
-      5   1
+      2   1
      /     \
     B       C
     |       |
-    3       4
+    2       4
      \     /
        END
 ```
 
-
+You'll see that the greedy algorithm will choose to go to location C first because it is the shortest path, and end up with a total of 5. The optimal path would have been to go through location B for a total of 4.
 
 **3) Divide and Conquer Algorithm**
 
