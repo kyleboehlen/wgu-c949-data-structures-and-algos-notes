@@ -87,7 +87,21 @@ Item 4 has a weight of 4 and a value of 5
 
 The greedy algorithm selects item 1 and item 4. This is a total value of 11, with a total weight of 8. 11/8=1.375. What if you chose item 1 and item 2? 9/4=2.25. The greedy algorithm did not get the optimal solution.&#x20;
 
-Let's take a look at one more example, we'll&#x20;
+Take a look at another example where we are applying the greedy algorithm to a single shortest path problem, where we are starting at position A and trying to get to the End
+
+```
+        A
+       / \
+      5   1
+     /     \
+    B       C
+    |       |
+    3       4
+     \     /
+       END
+```
+
+
 
 **3) Divide and Conquer Algorithm**
 
