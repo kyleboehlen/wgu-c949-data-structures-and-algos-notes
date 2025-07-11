@@ -75,160 +75,29 @@ A greedy algorithm selects the best option given each situation provided, regard
 1. Choosing the best option at each phase can lead to an overall optimal solution
 2. The optimal solution is made up of an optimal substructure, meaning the optimal solution to a problem is composed of the optimal solutions to every sub-problem.
 
-In order to show you how a greedy algorithm works, let's show 2 examples where a greedy algorithm wouldn't work.
+The best way to show how the greedy algorithm works is actually by giving examples of that show the shortcomings of a greedy algorithm. Here's an example of the greedy algorithm being applied to the knapsack problem:
 
-This is called the knapsack problem. The goal is to get the most value from the items, while minimizing the weight. Let's implement a greedy algorithm that only checks value to keep 2 out of the three values.
+{% content-ref url="050-algorithm-examples/051-greedy-algorithm-knapsack-problem.md" %}
+[051-greedy-algorithm-knapsack-problem.md](050-algorithm-examples/051-greedy-algorithm-knapsack-problem.md)
+{% endcontent-ref %}
 
-Item 1 has a weight of 2 and a value of 6
+Take a look at another example where we are applying the greedy algorithm to a single shortest path problem:
 
-Item 2 has a weight of 2 and a value of 3
-
-Item 4 has a weight of 4 and a value of 5
-
-The greedy algorithm selects item 1 and item 4. This is a total value of 11, with a total weight of 8. 11/8=1.375. What if you chose item 1 and item 2? 9/4=2.25. The greedy algorithm did not get the optimal solution.&#x20;
-
-Take a look at another example where we are applying the greedy algorithm to a single shortest path problem, where we are starting at position A and trying to get to the End
-
-```
-        A
-       / \
-      2   1
-     /     \
-    B       C
-    |       |
-    2       4
-     \     /
-       END
-```
-
-You'll see that the greedy algorithm will choose to go to location C first because it is the shortest path, and end up with a total of 5. The optimal path would have been to go through location B for a total of 4.
+{% content-ref url="050-algorithm-examples/052-greedy-algorithm-shortest-path-problem.md" %}
+[052-greedy-algorithm-shortest-path-problem.md](050-algorithm-examples/052-greedy-algorithm-shortest-path-problem.md)
+{% endcontent-ref %}
 
 **3) Divide and Conquer Algorithm**
 
-A divide and conquer algorithm breaks a problem up in to smaller parts, solves each part independently, and then merges all of the solutions in to one answer. A merge sort is a good example of a divide and conquer algorithm. How does a merge sort work?
+A divide and conquer algorithm breaks a problem up in to smaller parts, solves each part independently, and then merges all of the solutions in to one answer. A merge sort is a good example of a divide and conquer algorithm:
 
-Take an array:
-
-```
-Original: [64, 34, 25, 12, 22, 11, 90]
-```
-
-First it splits the orignal array in half over and over again until each node only consists of 1 element.
-
-```
-[64, 34, 25, 12, 22, 11, 90]            1 node
-       /              \             
-[64, 34, 25]      [12, 22, 11, 90]      2 nodes
-    /    \           /         \
-[64]   [34, 25]   [12, 22]   [11, 90]   4 nodes
-  |     /    \     /    \     /    \
-[64] [34]   [25] [12]  [22] [11]  [90]  7 nodes 
-```
-
-It then merges each of the nodes in the reverse order. Look at how many nodes are created in each step of the divde phase above. In the conquer phase we're going to combine nodes instead of splitting them by comparing the first items of each node and putting whichever one is smaller first in the merged node. On the first round this is very simple because we're only comparing one value to one value in each node. Take a look at the result:
-
-```
-[64] [25,34] [12,22] [11,90]   4 nodes 
-```
-
-We have 4 nodes, in each of the nodes all of the values are in order. Lets take a closer look at how we would merge these nodes in the next step. First we would create 2 nodes for the previous 4 nodes to merge in to:
-
-```
-[64] [25,34] [12,22] [11,90]   4 nodes
-[          ] [             ]   2 nodes     
-```
-
-Then we start by comparing only the first values of each node to each other. The first values in the left most nodes are 64 and 25. 25 is less than 64 so it gets added to the new node first:
-
-```
-[64] [34] [12,22] [11,90]   4 nodes
-[   25  ] [             ]   2 nodes     
-```
-
-Now the first most values in each of the left most nodes is 64 and 34. 34 is less than 64 so it gets added to the new node next:
-
-```
-[64] [  ] [12,22] [11,90]   4 nodes
-[ 25,34 ] [             ]   2 nodes     
-```
-
-Lastly only 64 is left, so it gets added to the new node next:
-
-```
-[  ]  [  ] [12,22] [11,90]   4 nodes
-[25,34,64] [             ]   2 nodes 
-```
-
-Let's quickly show how that would look for the right most nodes. It'll happen in 4 steps:
-
-1. ```
-   [  ]  [  ]  [22] [11,90]    4 nodes
-   [25,34,64]  [   12     ]    2 nodes
-   ```
-2. ```
-   [  ]  [  ]  [12,22] [90]    4 nodes
-   [25,34,64]  [     11   ]    2 nodes
-   ```
-3. ```
-   [  ]  [  ]     [22] [90]    4 nodes
-   [25,34,64]     [ 11,12 ]    2 nodes
-   ```
-4. ```
-   [  ]  [  ]    [  ]  [90]    4 nodes
-   [25,34,64]    [11,12,22]    2 nodes
-   ```
-5. ```
-   [  ]  [  ] [  ]     [  ]    4 nodes
-   [25,34,64] [11,12,22,90]    2 nodes
-   ```
-
-The end result will be a sorted list of the same array:
-
-6. ```
-   [11,12,22,25,34,64,90]      1 node
-   ```
-
-The time complexity for a merge sort is O(n log(n)) which is considered good I guess, I don't even know what that means yet. Here's an example of merge sort in Python tho:
-
-```python
-def mergeSort(arr):
-  if len(arr) <= 1:
-    return arr
-
-  mid = len(arr) // 2
-  leftHalf = arr[:mid]
-  rightHalf = arr[mid:]
-
-  sortedLeft = mergeSort(leftHalf)
-  sortedRight = mergeSort(rightHalf)
-
-  return merge(sortedLeft, sortedRight)
-
-def merge(left, right):
-  result = []
-  i = j = 0
-
-  while i < len(left) and j < len(right):
-    if left[i] < right[j]:
-      result.append(left[i])
-      i += 1
-    else:
-      result.append(right[j])
-      j += 1
-
-  result.extend(left[i:])
-  result.extend(right[j:])
-
-  return result
-
-mylist = [3, 7, 6, -10, 15, 23.5, 55, -13]
-mysortedlist = mergeSort(mylist)
-print("Sorted array:", mysortedlist) 
-```
-
-
+{% content-ref url="050-algorithm-examples/053-merge-sort-example.md" %}
+[053-merge-sort-example.md](050-algorithm-examples/053-merge-sort-example.md)
+{% endcontent-ref %}
 
 **4) Dynamic Programming Algorithm**
+
+**— TODO**
 
 **5) Backtracking Algorithm**
 
@@ -270,21 +139,31 @@ Because it prunes invalid paths early on it's more effecient than a brute force 
 
 **6) Recursive Algorithm**
 
+**— TODO**
+
 **7) Searching Algorithm**
+
+**— TODO**
 
 **8) Sorting Algorithm**
 
+**— TODO**
+
 **9) Hashing Algorithm**
 
+**— TODO**
+
 **10) Machine Learning Algorithm**
+
+**— TODO**
 
 
 
 How do you analyze an algorithm?
 
 1. Verify correctness. Does it actually produce the expected output for the given input?
-2. Analyze Space Complexity - measures how much extra memory or storage an algorithm needs as its input increases. --TODO: link analysis for space complexity
-3. Analyze Time Complexity - how long an agolrithm takes to run compared to the size of the input. Typically measured in Big O Notation. --TODO: link big o notation
+2. Analyze Space Complexity - measures how much extra memory or storage an algorithm needs as its input increases. — TODO: link analysis for space complexity
+3. Analyze Time Complexity - how long an agolrithm takes to run compared to the size of the input. Typically measured in Big O Notation. — TODO: link big o notation
 
 
 
