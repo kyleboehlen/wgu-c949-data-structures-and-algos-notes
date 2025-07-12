@@ -2,7 +2,7 @@
 
 Huffman compression is a very simple lossless compression aglorithm. How does it work?
 
-First you take the data:
+Well first let's take a basic look of how compression works. Take a look at the following sentence:
 
 ```
 Silly Sally sells seashells.
@@ -17,7 +17,7 @@ Let's also take a look at what this sentence looks like stored in binary using 8
 00101110
 ```
 
-Huffman Compression works by creating a dictionary of the most frequently occuring characters and assigning them smaller binary values. Let's take a look at what the frequency table for the original sentence is:
+We can now create a dictionary of the most frequently occuring characters and assigning them smaller binary values. Let's take a look at what the frequency table for the original sentence is:
 
 <table><thead><tr><th width="120">Character</th><th width="131">Frequency</th></tr></thead><tbody><tr><td>l</td><td>8</td></tr><tr><td>s</td><td>5</td></tr><tr><td>space</td><td>3</td></tr><tr><td>e</td><td>3</td></tr><tr><td>S</td><td>2</td></tr><tr><td>y</td><td>2</td></tr><tr><td>a</td><td>2</td></tr><tr><td>i</td><td>1</td></tr><tr><td>h</td><td>1</td></tr><tr><td>.</td><td>1</td></tr></tbody></table>
 
@@ -34,3 +34,5 @@ Take a look at what the resulting data is now:
 What a reduction! If you want to know how much of one you do the math yourself.
 
 (Just kidding, I did it. A reduction of 167 bits, or 67%)
+
+Huffman coding using a binary tree to assign fewer bits to more frequently occuring items.
