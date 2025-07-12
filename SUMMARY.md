@@ -13,3 +13,4 @@
 * [056 Merge Sort Example](050-algorithm-examples/056-merge-sort-example.md)
 * [057 Backtracking Algorithm Example](050-algorithm-examples/057-backtracking-algorithm-example.md)
 * [058 Huffman Compression](050-algorithm-examples/058-huffman-compression.md)
+* [059 Insertion Sort](050-algorithm-examples/059-insertion-sort.md)
