@@ -65,6 +65,24 @@ B->D
 
 No shifting of elements required. For a situation that requires a very fast insertion, this is why a linked list could be a better choice over an array.
 
+### Abstract Data Types
+
+An abstract data type is a data type described by how a programmer can interact with it, for example "data is inserted and retrieved from the end", without needing to know the underlying data structure that makes up the data type.
+
+For example, take an abstract data type that holds ordered data. You might be able to use the following functions on it:
+
+* Insert a new value
+* Delete a value
+* Search if a value exists
+
+Without ever needing to know what the underlying data structure is. These functions could be achieved using an array or a linked list without anything changing for whomever is consuming the abstract data type.
+
+Common abstract data types:
+
+<table><thead><tr><th width="115">ADT</th><th width="455">Description</th><th>Possible Underlying Data Structures</th></tr></thead><tbody><tr><td>List</td><td>Used for holding ordered data, duplicate items are allowed.</td><td>Array<br>Linked List</td></tr><tr><td>Dynamic Array</td><td>Used for holding ordered data and allowing indexed access.</td><td>Array</td></tr><tr><td>Stack</td><td>Allows adding and removing data only from the top.</td><td>Linked List</td></tr><tr><td>Queue</td><td>Allows adding items only to the end, and retrieve items only from the beginning.</td><td>Linked List</td></tr><tr><td>Deque</td><td>Just smush together a Stack and a Queue (you can add or remove from both the beginning and the end).</td><td>Linked List</td></tr><tr><td>Bag</td><td>Storing unordered items, duplicate items are allowed.</td><td>Array<br>Linked List</td></tr><tr><td>Set</td><td>A collection of unique items.</td><td>Binary Search Tree<br>Hash Table</td></tr><tr><td>Priority Queue</td><td>A queue where every item has a priority, the queue is sorted by priority, and new items get inserted after all other items of the same priority as the new item.</td><td>Heap</td></tr><tr><td>Dictionary (Map)</td><td>Allows storing items, and accessing items, based on a user defined "key" associated with the item.</td><td>Binary Search Tree<br>Hash Table</td></tr></tbody></table>
+
+##
+
 ## Algorithms
 
 A computational program specifies and input, a question about the input, that can be answered using a computer, and the desired output. An algorithm is the step by step process a computer would use to solve a computational problem. However, please note that an algorithm does not have to be written using a programming language.
