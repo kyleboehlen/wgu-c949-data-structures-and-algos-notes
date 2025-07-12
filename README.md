@@ -110,8 +110,8 @@ A greedy algorithm sacrafices optimization for speed. Here are two applied examp
 [054-greedy-algorithm-shortest-path.md](050-algorithm-examples/054-greedy-algorithm-shortest-path.md)
 {% endcontent-ref %}
 
-{% content-ref url="050-algorithm-examples/055-greedy-algorithm-knapsack-problem.md" %}
-[055-greedy-algorithm-knapsack-problem.md](050-algorithm-examples/055-greedy-algorithm-knapsack-problem.md)
+{% content-ref url="050-algorithm-examples/055-knapsack-problem.md" %}
+[055-knapsack-problem.md](050-algorithm-examples/055-knapsack-problem.md)
 {% endcontent-ref %}
 
 **3) Divide and Conquer Algorithm**
