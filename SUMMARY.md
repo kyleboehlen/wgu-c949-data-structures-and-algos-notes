@@ -5,7 +5,7 @@
 
 ## 050 Algorithm Examples
 
-* [051 Longest Common Substring (DNA Analysis Example)](050-algorithm-examples/051-longest-common-substring-dna-analysis-example.md)
+* [051 Longest Common Substring (Dynamic Programming)](050-algorithm-examples/051-longest-common-substring-dynamic-programming.md)
 * [052 Binary Search Example (Product Search)](050-algorithm-examples/052-binary-search-example-product-search.md)
 * [053 Dijkstra's Shortest Path (Navigation Example)](050-algorithm-examples/053-dijkstras-shortest-path-navigation-example.md)
 * [054 Greedy Algorithm (Shortest Path)](050-algorithm-examples/054-greedy-algorithm-shortest-path.md)

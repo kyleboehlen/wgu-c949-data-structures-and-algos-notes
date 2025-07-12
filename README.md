@@ -87,7 +87,7 @@ A computational program specifies and input, a question about the input, that ca
 
 Examples of Practical Applications of Algorithms
 
-<table><thead><tr><th width="139">Field</th><th>Computational Problem</th><th width="257">Possible Algorithm</th><th data-type="content-ref"></th></tr></thead><tbody><tr><td>DNA Analysis</td><td>Given strands of DNA from two different individuals, what is the longest strand of nucleotides that both individuals have in common?</td><td><strong>Longest common substring problem:</strong> nucleotides in a string can be represented using A, C, G, and T. </td><td><a href="050-algorithm-examples/051-longest-common-substring-dna-analysis-example.md">051-longest-common-substring-dna-analysis-example.md</a></td></tr><tr><td>Product Search</td><td>If you were given a product ID, and an array of products, what is an efficient way of looking up the product details?</td><td><p><strong>Binary Search:</strong> an efficient way of searching through information where<br>A) you have an ordered list</p><p>and <br>B) the items can be accessed directly, for example via indexes in an array. </p></td><td><a href="050-algorithm-examples/052-binary-search-example-product-search.md">052-binary-search-example-product-search.md</a></td></tr><tr><td>Navigation</td><td>Given a starting and ending location, what is the fastest way to traverse the paths between those 2 locations?</td><td><strong>Dijkstra's Shortest Path:</strong> an algorithm that determines what the shortest path is between a starting vertex and each other vertex in a graph. </td><td><a href="050-algorithm-examples/053-dijkstras-shortest-path-navigation-example.md">053-dijkstras-shortest-path-navigation-example.md</a></td></tr></tbody></table>
+<table><thead><tr><th width="139">Field</th><th>Computational Problem</th><th width="257">Possible Algorithm</th><th data-type="content-ref"></th></tr></thead><tbody><tr><td>DNA Analysis</td><td>Given strands of DNA from two different individuals, what is the longest strand of nucleotides that both individuals have in common?</td><td><strong>Longest common substring problem:</strong> nucleotides in a string can be represented using A, C, G, and T. </td><td><a href="050-algorithm-examples/051-longest-common-substring-dynamic-programming.md">051-longest-common-substring-dynamic-programming.md</a></td></tr><tr><td>Product Search</td><td>If you were given a product ID, and an array of products, what is an efficient way of looking up the product details?</td><td><p><strong>Binary Search:</strong> an efficient way of searching through information where<br>A) you have an ordered list</p><p>and <br>B) the items can be accessed directly, for example via indexes in an array. </p></td><td><a href="050-algorithm-examples/052-binary-search-example-product-search.md">052-binary-search-example-product-search.md</a></td></tr><tr><td>Navigation</td><td>Given a starting and ending location, what is the fastest way to traverse the paths between those 2 locations?</td><td><strong>Dijkstra's Shortest Path:</strong> an algorithm that determines what the shortest path is between a starting vertex and each other vertex in a graph. </td><td><a href="050-algorithm-examples/053-dijkstras-shortest-path-navigation-example.md">053-dijkstras-shortest-path-navigation-example.md</a></td></tr></tbody></table>
 
 
 
@@ -122,7 +122,11 @@ A divide and conquer algorithm breaks a problem up in to smaller parts, solves e
 
 **4) Dynamic Programming Algorithm**
 
-**— TODO**
+Dynamic Programming is a technique to break up a problem in to smaller sub problems and storing the solutions of those sub problems to prevent computing the same things over and over while solving the overall problem.&#x20;
+
+Here is an example of applying dynamic programming to the Longest Common Substring problem:
+
+[051-longest-common-substring-dynamic-programming.md](050-algorithm-examples/051-longest-common-substring-dynamic-programming.md "mention")
 
 **5) Backtracking Algorithm**
 
