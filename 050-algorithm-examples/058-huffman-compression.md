@@ -35,4 +35,8 @@ What a reduction! If you want to know how much of one you do the math yourself.
 
 (Just kidding, I did it. A reduction of 167 bits, or 67%)
 
-Huffman coding using a binary tree to assign fewer bits to more frequently occuring items.
+Huffman coding uses a binary tree to assign fewer bits to more frequently occurring items.
+
+Here's how it works:
+
+— TODO
