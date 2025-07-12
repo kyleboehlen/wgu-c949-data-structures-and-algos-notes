@@ -104,13 +104,11 @@ A greedy algorithm selects the best option given each situation provided, regard
 1. Choosing the best option at each phase can lead to an overall optimal solution
 2. The optimal solution is made up of an optimal substructure, meaning the optimal solution to a problem is composed of the optimal solutions to every sub-problem.
 
-The best way to show how the greedy algorithm works is actually by giving examples of that show the shortcomings of a greedy algorithm. Here's an example of the greedy algorithm being applied to the knapsack problem:
+A greedy algorithm sacrafices optimization for speed. Here are two applied examples of greedy algorithms:
 
 {% content-ref url="050-algorithm-examples/054-greedy-algorithm-shortest-path.md" %}
 [054-greedy-algorithm-shortest-path.md](050-algorithm-examples/054-greedy-algorithm-shortest-path.md)
 {% endcontent-ref %}
-
-Take a look at another example where we are applying the greedy algorithm to a single shortest path problem:
 
 {% content-ref url="050-algorithm-examples/055-greedy-algorithm-knapsack-problem.md" %}
 [055-greedy-algorithm-knapsack-problem.md](050-algorithm-examples/055-greedy-algorithm-knapsack-problem.md)
