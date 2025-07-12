@@ -81,8 +81,6 @@ Common abstract data types:
 
 <table><thead><tr><th width="115">ADT</th><th width="455">Description</th><th>Possible Underlying Data Structures</th></tr></thead><tbody><tr><td>List</td><td>Used for holding ordered data, duplicate items are allowed.</td><td>Array<br>Linked List</td></tr><tr><td>Dynamic Array</td><td>Used for holding ordered data and allowing indexed access.</td><td>Array</td></tr><tr><td>Stack</td><td>Allows adding and removing data only from the top.</td><td>Linked List</td></tr><tr><td>Queue</td><td>Allows adding items only to the end, and retrieve items only from the beginning.</td><td>Linked List</td></tr><tr><td>Deque</td><td>Just smush together a Stack and a Queue (you can add or remove from both the beginning and the end).</td><td>Linked List</td></tr><tr><td>Bag</td><td>Storing unordered items, duplicate items are allowed.</td><td>Array<br>Linked List</td></tr><tr><td>Set</td><td>A collection of unique items.</td><td>Binary Search Tree<br>Hash Table</td></tr><tr><td>Priority Queue</td><td>A queue where every item has a priority, the queue is sorted by priority, and new items get inserted after all other items of the same priority as the new item.</td><td>Heap</td></tr><tr><td>Dictionary (Map)</td><td>Allows storing items, and accessing items, based on a user defined "key" associated with the item.</td><td>Binary Search Tree<br>Hash Table</td></tr></tbody></table>
 
-##
-
 ## Algorithms
 
 A computational program specifies and input, a question about the input, that can be answered using a computer, and the desired output. An algorithm is the step by step process a computer would use to solve a computational problem. However, please note that an algorithm does not have to be written using a programming language.
