@@ -21,3 +21,5 @@ A queue is an abstract data type where values are inserted at the end of the que
 
 
 ### Array
+
+## Deque
