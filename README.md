@@ -93,6 +93,8 @@ Examples of Practical Applications of Algorithms
 
 ### The 10 Types of Algorithms
 
+[https://www.simplilearn.com/tutorials/data-structure-tutorial/what-is-an-algorithm](https://www.simplilearn.com/tutorials/data-structure-tutorial/what-is-an-algorithm)
+
 **1) Brute Force**
 
 A brute force algorithm is very simple and extremely straightforward. It tries every solution until it finds the correct answer. It is inefficient.&#x20;
@@ -104,14 +106,10 @@ A greedy algorithm selects the best option given each situation provided, regard
 1. Choosing the best option at each phase can lead to an overall optimal solution
 2. The optimal solution is made up of an optimal substructure, meaning the optimal solution to a problem is composed of the optimal solutions to every sub-problem.
 
-A greedy algorithm sacrafices optimization for speed. Here are two applied examples of greedy algorithms:
+A greedy algorithm sacrafices optimization for speed. This is an example of [heuristics](./#heuristics). Here is a quick example of a greedy algorithm applied to the shortest path problem:
 
 {% content-ref url="050-algorithm-examples/054-greedy-algorithm-shortest-path.md" %}
 [054-greedy-algorithm-shortest-path.md](050-algorithm-examples/054-greedy-algorithm-shortest-path.md)
-{% endcontent-ref %}
-
-{% content-ref url="050-algorithm-examples/055-knapsack-problem.md" %}
-[055-knapsack-problem.md](050-algorithm-examples/055-knapsack-problem.md)
 {% endcontent-ref %}
 
 **3) Divide and Conquer Algorithm**
@@ -164,7 +162,17 @@ The backtracking algorithm allows the algorithm to back out when when an invalid
    2. Nobody has ever proven that an efficient algorithm for solving NP-complete problems doesn't exist.
    3. If you're dealing with an NP-complete problem you don't need to worry about finding the most effecient algorithm, instead you can focus on finding a good solution that doesn't have to be perfect.
 
+### Heuristics
 
+Heuristics are shortcuts that sacrifice optimal solutions for speed. They might be mental shortcuts, like rules of thumb, that help you make decisions quicker without having to calculate every outcome. They can lead to a good quick solution.
 
+In programming a heuristic is a technique that excepts a less than optimal solution, or less accurate solution, in order to improve execution speed.
 
+A good example of heuristics is how greedy algorithms are applied to the [knapsack problem.](050-algorithm-examples/055-knapsack-problem.md)&#x20;
+
+— TODO: update that link to the greedy algorithm section in the knapsack problem
+
+A self-adjusting heuristic is an algrithm that changes the underlying data structure based on how it is accessed. Tree balancing is an example of self-adjusting heuristics.
+
+— TODO: link self-adjusting heuristics
 
