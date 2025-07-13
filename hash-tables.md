@@ -75,7 +75,44 @@ The load factor is the number of items in a hash table divided by the length of 
 
 ## Common Hashing Functions
 
+### Good Hash Function
 
+A good hash function is one that minimizes collisons, it does this by distributing the keys as evenly across the indexes as possible. This also has the side effect of making the function as fast as possible as well.
+
+A perfect hashing function is one that never collides ever. The only way to have a perfect hashing function is by knowing the number of all the items and all of the possible item keys before hand.&#x20;
+
+This is why hash tables are O(1) in a perfect world, and O(n) in the worst case scenario.
+
+### Modulo Hash Function
+
+A modulo hash function is exactly what we've been using throughout all of the examples on this page. Its main purpose is ensuring that the resulting index is always equal to or greater than 0, and less than the length of the underlying array.
+
+### Mid-square Hash Function
+
+A mid-square hash function works by squaring the key, taking R amount of digits from the center of the resulting square as the index. For example if we were getting the index for key 458 in a hash table with a length of 100 using R = 2 we would get 458 \* 458 = 209,764, the mid square would be 2 digits from the center = 97. In order for a mid-square function to work R must be greater than or equal to `log 10 L` where L is the length of the hash table.&#x20;
+
+This is a base 10 implementation of a mid-square function, although typically a base 2 mid-square hash function is implemented.
+
+### Multiplicative String Hash Function
+
+A multiplicative string hash function works well on short english strings. It requires setting the string hash to an initial value, and defining a hash multiplier first. It then iterates over each character in the string key. Each iteration changes the string hash value to `C * M + V` where:
+
+* C = current string hash value
+* M = multiplier
+* V = the ASCII or Unicode value of the current iterations character
+
+Of course you then do need to apply the modulus function of `C % L` where:
+
+* C = current string hash value
+* L = length of the table hash
+
+To ensure the resulting index stays in bounds.&#x20;
+
+Daniel J. Bernstein foundf that using an initial value (C) of 5381 and a multiplier of 33 (M) performs excellent agains short english keys. You'll notice that when defining variables like this in hashing functions they're typically always prime. This is of course due to a prime numbers unique divisiblity properties when using modulus and helps distribute keys across the available indexes.
+
+
+
+\--TODO: hashing attacks ddos: [https://www.reddit.com/r/algorithms/comments/17zcylu/why\_time\_complexity\_of\_hashmap\_lookup\_is\_o1\_not/](https://www.reddit.com/r/algorithms/comments/17zcylu/why_time_complexity_of_hashmap_lookup_is_o1_not/)
 
 
 
