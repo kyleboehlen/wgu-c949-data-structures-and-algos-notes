@@ -1,4 +1,4 @@
-# 000 Introduction
+# Introduction
 
 ## Data Structures
 
@@ -87,7 +87,7 @@ A computational program specifies and input, a question about the input, that ca
 
 Examples of Practical Applications of Algorithms
 
-<table><thead><tr><th width="139">Field</th><th>Computational Problem</th><th width="257">Possible Algorithm</th><th data-type="content-ref"></th></tr></thead><tbody><tr><td>DNA Analysis</td><td>Given strands of DNA from two different individuals, what is the longest strand of nucleotides that both individuals have in common?</td><td><strong>Longest common substring problem:</strong> nucleotides in a string can be represented using A, C, G, and T. </td><td><a href="050-algorithm-examples/051-longest-common-substring-dna-analysis-example.md">051-longest-common-substring-dna-analysis-example.md</a></td></tr><tr><td>Product Search</td><td>If you were given a product ID, and an array of products, what is an efficient way of looking up the product details?</td><td><p><strong>Binary Search:</strong> an efficient way of searching through information where<br>A) you have an ordered list</p><p>and <br>B) the items can be accessed directly, for example via indexes in an array. </p></td><td><a href="050-algorithm-examples/052-binary-search-example-product-search.md">052-binary-search-example-product-search.md</a></td></tr><tr><td>Navigation</td><td>Given a starting and ending location, what is the fastest way to traverse the paths between those 2 locations?</td><td><strong>Dijkstra's Shortest Path:</strong> an algorithm that determines what the shortest path is between a starting vertex and each other vertex in a graph. </td><td><a href="050-algorithm-examples/053-dijkstras-shortest-path-navigation-example.md">053-dijkstras-shortest-path-navigation-example.md</a></td></tr></tbody></table>
+<table><thead><tr><th width="139">Field</th><th>Computational Problem</th><th width="257">Possible Algorithm</th><th data-type="content-ref"></th></tr></thead><tbody><tr><td>DNA Analysis</td><td>Given strands of DNA from two different individuals, what is the longest strand of nucleotides that both individuals have in common?</td><td><strong>Longest common substring problem:</strong> nucleotides in a string can be represented using A, C, G, and T. </td><td><a href="more-algorithm-examples/longest-common-substring-dynamic-programming.md">longest-common-substring-dynamic-programming.md</a></td></tr><tr><td>Product Search</td><td>If you were given a product ID, and an array of products, what is an efficient way of looking up the product details?</td><td><p><strong>Binary Search:</strong> an efficient way of searching through information where<br>A) you have an ordered list</p><p>and <br>B) the items can be accessed directly, for example via indexes in an array. </p></td><td><a href="searching-algorithms/binary-search.md">binary-search.md</a></td></tr><tr><td>Navigation</td><td>Given a starting and ending location, what is the fastest way to traverse the paths between those 2 locations?</td><td><strong>Dijkstra's Shortest Path:</strong> an algorithm that determines what the shortest path is between a starting vertex and each other vertex in a graph. </td><td><a href="more-algorithm-examples/dijkstras-shortest-path-navigation-example.md">dijkstras-shortest-path-navigation-example.md</a></td></tr></tbody></table>
 
 
 
@@ -108,16 +108,16 @@ A greedy algorithm selects the best option given each situation provided, regard
 
 A greedy algorithm sacrafices optimization for speed. This is an example of [heuristics](./#heuristics). Here is a quick example of a greedy algorithm applied to the shortest path problem:
 
-{% content-ref url="050-algorithm-examples/054-greedy-algorithm-shortest-path.md" %}
-[054-greedy-algorithm-shortest-path.md](050-algorithm-examples/054-greedy-algorithm-shortest-path.md)
+{% content-ref url="more-algorithm-examples/greedy-algorithm-shortest-path.md" %}
+[greedy-algorithm-shortest-path.md](more-algorithm-examples/greedy-algorithm-shortest-path.md)
 {% endcontent-ref %}
 
 **3) Divide and Conquer Algorithm**
 
 A divide and conquer algorithm breaks a problem up in to smaller parts, solves each part independently, and then merges all of the solutions in to one answer. A merge sort is a good example of a divide and conquer algorithm:
 
-{% content-ref url="050-algorithm-examples/056-merge-sort-example.md" %}
-[056-merge-sort-example.md](050-algorithm-examples/056-merge-sort-example.md)
+{% content-ref url="sorting-algorithms/merge-sort-example.md" %}
+[merge-sort-example.md](sorting-algorithms/merge-sort-example.md)
 {% endcontent-ref %}
 
 **4) Dynamic Programming Algorithm**
@@ -126,16 +126,16 @@ Dynamic Programming is a technique to break up a problem in to smaller sub probl
 
 Here is an example of applying dynamic programming to the Longest Common Substring problem:
 
-{% content-ref url="050-algorithm-examples/051-longest-common-substring-dna-analysis-example.md" %}
-[051-longest-common-substring-dna-analysis-example.md](050-algorithm-examples/051-longest-common-substring-dna-analysis-example.md)
+{% content-ref url="more-algorithm-examples/longest-common-substring-dynamic-programming.md" %}
+[longest-common-substring-dynamic-programming.md](more-algorithm-examples/longest-common-substring-dynamic-programming.md)
 {% endcontent-ref %}
 
 **5) Backtracking Algorithm**
 
 The backtracking algorithm allows the algorithm to back out when when an invalid state is reached. Take the following example:
 
-{% content-ref url="050-algorithm-examples/057-backtracking-algorithm-example.md" %}
-[057-backtracking-algorithm-example.md](050-algorithm-examples/057-backtracking-algorithm-example.md)
+{% content-ref url="more-algorithm-examples/backtracking-algorithm.md" %}
+[backtracking-algorithm.md](more-algorithm-examples/backtracking-algorithm.md)
 {% endcontent-ref %}
 
 **6) Recursive Algorithm**
@@ -174,7 +174,7 @@ Heuristics are shortcuts that sacrifice optimal solutions for speed. They might 
 
 In programming a heuristic is a technique that excepts a less than optimal solution, or less accurate solution, in order to improve execution speed.
 
-A good example of heuristics is how greedy algorithms are applied to the [knapsack problem.](050-algorithm-examples/055-knapsack-problem.md)&#x20;
+A good example of heuristics is how greedy algorithms are applied to the [knapsack problem.](more-algorithm-examples/knapsack-problem.md)&#x20;
 
 — TODO: update that link to the greedy algorithm section in the knapsack problem
 

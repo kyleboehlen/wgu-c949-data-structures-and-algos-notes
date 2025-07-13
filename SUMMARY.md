@@ -1,18 +1,36 @@
 # Table of contents
 
-* [000 Introduction](README.md)
-* [001 Lists](001-lists.md)
-* [002 Stacks and Queues](002-stacks-and-queues.md)
-* [003 Hash Tables](003-hash-tables.md)
+* [Introduction](README.md)
+* [Big O Notation](big-o-notation.md)
 
-## 050 Algorithm Examples
+## Data Structures
 
-* [051 Longest Common Substring (Dynamic Programming)](050-algorithm-examples/051-longest-common-substring-dna-analysis-example.md)
-* [052 Binary Search Example (Product Search)](050-algorithm-examples/052-binary-search-example-product-search.md)
-* [053 Dijkstra's Shortest Path (Navigation Example)](050-algorithm-examples/053-dijkstras-shortest-path-navigation-example.md)
-* [054 Greedy Algorithm (Shortest Path)](050-algorithm-examples/054-greedy-algorithm-shortest-path.md)
-* [055 Knapsack Problem](050-algorithm-examples/055-knapsack-problem.md)
-* [056 Merge Sort Example](050-algorithm-examples/056-merge-sort-example.md)
-* [057 Backtracking Algorithm Example](050-algorithm-examples/057-backtracking-algorithm-example.md)
-* [058 Huffman Compression](050-algorithm-examples/058-huffman-compression.md)
-* [059 Insertion Sort](050-algorithm-examples/059-insertion-sort.md)
+***
+
+* [Lists](lists.md)
+* [Stacks and Queues](stacks-and-queues.md)
+* [Hash Tables](hash-tables.md)
+* [Trees](trees.md)
+* [Balanced Trees](balanced-trees.md)
+* [Heaps and Treaps](heaps-and-treaps.md)
+* [Sets](sets.md)
+* [Graphs](graphs.md)
+* [B-Trees](b-trees.md)
+
+## Sorting Algorithms
+
+* [Insertion Sort](sorting-algorithms/insertion-sort.md)
+* [Merge Sort Example](sorting-algorithms/merge-sort-example.md)
+
+## Searching Algorithms
+
+* [Binary Search](searching-algorithms/binary-search.md)
+
+## More Algorithm Examples
+
+* [Longest Common Substring (Dynamic Programming)](more-algorithm-examples/longest-common-substring-dynamic-programming.md)
+* [Dijkstra's Shortest Path (Navigation Example)](more-algorithm-examples/dijkstras-shortest-path-navigation-example.md)
+* [Greedy Algorithm (Shortest Path)](more-algorithm-examples/greedy-algorithm-shortest-path.md)
+* [Knapsack Problem](more-algorithm-examples/knapsack-problem.md)
+* [Backtracking Algorithm](more-algorithm-examples/backtracking-algorithm.md)
+* [Huffman Compression](more-algorithm-examples/huffman-compression.md)
