@@ -23,3 +23,5 @@ A queue is an abstract data type where values are inserted at the end of the que
 ### Array
 
 ## Deque
+
+A deque (pronounced deck) is a double sided stack. It has the same operations as a stack, but you must specifiy whether the operation is happening at the front or back of the stack. I.E. pushBack, popFront, peekBack, etc.
