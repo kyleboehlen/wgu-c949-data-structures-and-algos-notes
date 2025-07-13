@@ -18,9 +18,11 @@ A queue is an abstract data type where values are inserted at the end of the que
 
 ### Linked List
 
-
+Typically using a linked list for a queue the head node is the front of the queue, and the tail node is the end of the queue.
 
 ### Array
+
+Just like stacks implementing with arrays, it can be bounded or unbounded. Two variables are needed to track a queue using an array. The index of the front of the queue, and the number of values in the queue.  When adding a value to the end of the queue it would be added to array\[front\_index + total\_num\_values] if that index exceeds the array's length - 1 the new item will need to wrap around from index 0.
 
 ## Deque
 
