@@ -3,6 +3,7 @@
 * [000 Introduction](README.md)
 * [001 Lists](001-lists.md)
 * [002 Stacks and Queues](002-stacks-and-queues.md)
+* [003 Hash Tables](003-hash-tables.md)
 
 ## 050 Algorithm Examples
 
