@@ -110,7 +110,19 @@ To ensure the resulting index stays in bounds.&#x20;
 
 Daniel J. Bernstein foundf that using an initial value (C) of 5381 and a multiplier of 33 (M) performs excellent agains short english keys. You'll notice that when defining variables like this in hashing functions they're typically always prime. This is of course due to a prime numbers unique divisiblity properties when using modulus and helps distribute keys across the available indexes.
 
+## Direct Hashing
 
+Direct hashing is when you use the key as the index of the hash table. It prevents collisions, but it requires having a large hash table and requires all of they keys to be integers.
+
+## Other Hashing Uses
+
+### Error Checking
+
+Creating a hash from data is a quick way to validate that information hasn't been corrupted or changed in transit. From an error correction standpoint if the hash changes then you know that there is an error and the data has changed. From a security standpoint if you include a hash with your payload, and the payload is intercepted an modified, the recipient will know the payload has been modified when they run the hash against it and it differs from the hash included.
+
+### Password Storage
+
+If websites stored your passwords in plain text on their database then any employee with access to that database would also have access to your password. How do we prevent this? When you first create an account on a website we take your password, run it through a hashing algorithm, and store the hashed output. Then everytime you log in we take the password provided upon login, hash it again, and check the output against the stored hash. If it is the same then the user has provided the correct password. However, the password is never actually stored on the website's servers.
 
 \--TODO: hashing attacks ddos: [https://www.reddit.com/r/algorithms/comments/17zcylu/why\_time\_complexity\_of\_hashmap\_lookup\_is\_o1\_not/](https://www.reddit.com/r/algorithms/comments/17zcylu/why_time_complexity_of_hashmap_lookup_is_o1_not/)
 
