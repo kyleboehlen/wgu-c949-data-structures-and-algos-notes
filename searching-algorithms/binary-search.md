@@ -20,7 +20,7 @@ Like this:
     1    3  5    7        9    11 13   15    
 ```
 
-Binary search trees are so great because at worst your search is O(D+1) where D is the depth of the binary tree. Each node you visit if the value you're searching for is greater than the current node, go right. If it's less than the current node, go left. If you were searching for 11 your algorithm would:
+Binary search trees are so great because at worst your search is O(H) where H is the height of the binary tree. Each node you visit if the value you're searching for is greater than the current node, go right. If it's less than the current node, go left. If you were searching for 11 your algorithm would:
 
 * Starting at node 8 see that 11>8, go right to node 12
 * At node 12 see that 11<12, go left to node 10
@@ -28,6 +28,8 @@ Binary search trees are so great because at worst your search is O(D+1) where D 
 * At node 11 see that 11=11, return the node
 
 If you used an iterative search on a list with the same data you'd have to search 11 out of the 15 values, instead you only searched 4.
+
+A binary tree's height may be as small as O(logN). Meaning a 10,000 node list may only require 14 comparisons. By keeping every level in a binary tree full the binary trees height is log2N.
 
 Also, look how simple it is in python:
 
