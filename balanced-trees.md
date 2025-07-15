@@ -77,7 +77,7 @@ AVL trees are not perfect trees, however they never have a height of more than 1
 
 \--TODO: show a minimum height on a perfect binary tree with 7 nodes, show a valid AVL tree with 7 nodes that has a height of 3 instead of the perfect height of 2
 
-### Red Black Trees
+## Red Black Trees
 
 ## Rotations
 
