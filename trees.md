@@ -336,3 +336,13 @@ File systems are based on trees, however not binary trees. Here's a simple examp
 
 Just uh, idk tilt your head or turn your screen sideways so it looks like a tree. See it? Sweet.
 
+## Binary Tree Functions
+
+### Searching
+
+Check that out👇
+
+{% content-ref url="searching-algorithms/binary-search.md" %}
+[binary-search.md](searching-algorithms/binary-search.md)
+{% endcontent-ref %}
+
