@@ -79,3 +79,7 @@ AVL trees are not perfect trees, however they never have a height of more than 1
 
 ### Red Black Trees
 
+## Rotations
+
+
+

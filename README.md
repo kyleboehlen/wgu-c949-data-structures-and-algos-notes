@@ -176,9 +176,13 @@ In programming a heuristic is a technique that excepts a less than optimal solut
 
 A good example of heuristics is how greedy algorithms are applied to the [knapsack problem.](more-algorithm-examples/knapsack-problem.md)&#x20;
 
-— TODO: update that link to the greedy algorithm section in the knapsack problem
+{% content-ref url="more-algorithm-examples/knapsack-problem.md" %}
+[knapsack-problem.md](more-algorithm-examples/knapsack-problem.md)
+{% endcontent-ref %}
 
 A self-adjusting heuristic is an algrithm that changes the underlying data structure based on how it is accessed. Tree balancing is an example of self-adjusting heuristics.
 
-— TODO: link self-adjusting heuristics
+{% content-ref url="balanced-trees.md" %}
+[balanced-trees.md](balanced-trees.md)
+{% endcontent-ref %}
 

@@ -1,8 +1,8 @@
-# 055 Greedy Algorithm (Knapsack Problem)
+# Knapsack Problem
 
-— TODO: Greedy method with fractional programming
+## Greedy Algorithm
 
-— TODO: Greedy method with non-fractional programming
+\--TODO:
 
 1. Choose your method of selection
    1. Highest profit
@@ -10,3 +10,5 @@
    3. Profit to weight ratio
 2. Make your selection one at a time
 3. &#x20;Don't look back
+
+\--TODO: non fractional and fractional example
