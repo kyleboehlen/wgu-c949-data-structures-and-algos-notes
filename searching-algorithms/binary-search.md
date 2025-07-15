@@ -33,10 +33,7 @@ Also, look how simple it is in python:
 
 ```python
 def search(root, key):
-    if root is None:
-        return null
-        
-    if root.key == key:
+    if root is None or root.key == key:
         return root
         
     if root.key < key:
