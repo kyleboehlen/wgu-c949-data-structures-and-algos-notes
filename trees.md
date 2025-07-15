@@ -346,3 +346,48 @@ Check that out👇
 [binary-search.md](searching-algorithms/binary-search.md)
 {% endcontent-ref %}
 
+### Insertions and Deletions
+
+They're not that different from searching, same principles.
+
+### In Order Traversal
+
+Traversing a binary tree in order, and only visiting each node once, is also pretty simple. Take a look at the binary tree from the Binary Search example. It is labeled in the order that each node would be printed if you used the following code. First node passed would be the root node.
+
+```python
+def printAllNodesInOrder(node):
+    if node is None:
+        return
+    printAllNodesInOrder(node.leftChild)
+    print node
+    printAllNodesInOrder(node.rightChild
+```
+
+## Parent Pointers
+
+In some binary trees the nodes wil also have parent pointers. Like a doubly-linked list vs a singly-linked list.
+
+## Tries
+
+A trie (or prefix tree) represents a set of strings. It is not a binary tree, it's an n-ary tree, and each node can have more than one child. It starts with an empty root node. The leaf nodes will always be a terminating node. This is how one would look:
+
+```
+ROOT
+│
+├─── C ──── A ──┬─── R ──┬─── D ─── * (CARD)
+│               │        ├─── E ──┬─── F ── U ── L ─── * (CAREFUL)
+│               │        │        └─── * (CARE)
+│               │        └─── * (CAR)
+│               └─── T ─── * (CAT)
+│
+├─── D ──── O ──┬─── G ──┬─── M ── A ─── * (DOGMA)
+│               │        └─── * (DOG)
+│               └─── O ── R ──┬─── S ─── * (DOORS)
+│                             └─── * (DOOR)
+│
+└─── T ──── R ──┬─── A ──┬─── P ─── * (TRAP)
+                │        └─── V ── E ── L ─── * (TRAVEL)
+                └─── E ── E ─── * (TREE)
+```
+
+I've flipped the tree on it's side, included \* for the terminating nodes, and included the words that traversing the tree down that path would spell out if you were to trace that path. Tries are used for autocomplete, predictive text, things of that nature.
