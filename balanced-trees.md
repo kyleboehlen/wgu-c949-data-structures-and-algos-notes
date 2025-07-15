@@ -81,5 +81,5 @@ AVL trees are not perfect trees, however they never have a height of more than 1
 
 ## Rotations
 
-\--TODO:
+\--TODO: this video seems good: [https://www.youtube.com/watch?app=desktop\&v=vRwi\_UcZGjU\&t=0s\&t=1023](https://www.youtube.com/watch?app=desktop\&v=vRwi_UcZGjU\&t=0s\&t=1023)
 
