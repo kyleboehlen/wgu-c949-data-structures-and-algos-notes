@@ -367,6 +367,10 @@ def printAllNodesInOrder(node):
 
 In some binary trees the nodes wil also have parent pointers. Like a doubly-linked list vs a singly-linked list.
 
+## Uncle Nodes
+
+— TODO
+
 ## Tries
 
 A trie (or prefix tree) represents a set of strings. It is not a binary tree, it's an n-ary tree, and each node can have more than one child. It starts with an empty root node. The leaf nodes will always be a terminating node. This is how one would look:
