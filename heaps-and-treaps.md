@@ -16,5 +16,20 @@ Removals happen like reverse insertions. They start by removing the root node an
 
 ### Arrays
 
-Heaps are typically stored in arrays. That way they can be traversed in order. See the example heap in tree form, and in the corresponding array below:
+Heaps are typically stored in arrays. That way they can be traversed in order. See the example heap in tree form:
+
+```
+       72
+      /  \
+    58    63
+   / \     \
+  55  16   44
+```
+
+and the corresponding array:
+
+```
+Array: [72, 58, 63, 55, 16, 44]
+Index:  0   1   2   3   4   5
+```
 
