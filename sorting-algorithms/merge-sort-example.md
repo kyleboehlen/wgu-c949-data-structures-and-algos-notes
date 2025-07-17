@@ -1,4 +1,4 @@
-# 053 Merge Sort Example
+# Merge Sort
 
 How does a merge sort work?
 

@@ -20,7 +20,11 @@
 ## Sorting Algorithms
 
 * [Insertion Sort](sorting-algorithms/insertion-sort.md)
-* [Merge Sort](sorting-algorithms/merge-sort.md)
+* [Merge Sort](sorting-algorithms/merge-sort-example.md)
+
+***
+
+* [Heap Sort](heap-sort.md)
 
 ## Searching Algorithms
 
