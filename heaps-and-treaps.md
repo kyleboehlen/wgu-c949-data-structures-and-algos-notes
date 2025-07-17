@@ -33,3 +33,6 @@ Array: [72, 58, 63, 55, 16, 44]
 Index:  0   1   2   3   4   5
 ```
 
+### Sorting
+
+Sorting is very easy with a max-heap. You can take an unsorted array and turn it in to a max-heap by traversing the array in reverse order, taking the current index of the traverse, putting it at the 0 index of the array, and perculating it down the array.

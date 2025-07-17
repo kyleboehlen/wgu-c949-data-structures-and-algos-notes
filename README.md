@@ -116,8 +116,8 @@ A greedy algorithm sacrafices optimization for speed. This is an example of [heu
 
 A divide and conquer algorithm breaks a problem up in to smaller parts, solves each part independently, and then merges all of the solutions in to one answer. A merge sort is a good example of a divide and conquer algorithm:
 
-{% content-ref url="sorting-algorithms/merge-sort-example.md" %}
-[merge-sort-example.md](sorting-algorithms/merge-sort-example.md)
+{% content-ref url="sorting-algorithms/merge-sort.md" %}
+[merge-sort.md](sorting-algorithms/merge-sort.md)
 {% endcontent-ref %}
 
 **4) Dynamic Programming Algorithm**
