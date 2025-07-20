@@ -25,6 +25,12 @@
 ***
 
 * [Heap Sort](heap-sort.md)
+* [Selection Sort](selection-sort.md)
+* [Shell Sort](shell-sort.md)
+* [Quick Sort](quick-sort.md)
+* [Radix Sort](radix-sort.md)
+* [Bubble Sort](bubble-sort.md)
+* [Bucket Sort](bucket-sort.md)
 
 ## Searching Algorithms
 
